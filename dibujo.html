@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/dibujo.css">
+    <body>
+	    <div id='colors'>
+	        <button id='black' onclick='changeColor("black")' ontouchstart='changeColor("black")'></button>
+		    <button id='red' onclick='changeColor("red")' ontouchstart='changeColor("red")'></button>
+		    <button id='green' onclick='changeColor("green")' ontouchstart='changeColor("green")'></button>
+		    <button id='blue' onclick='changeColor("blue")' ontouchstart='changeColor("blue")'></button>
+		    <button id='orange' onclick='changeColor("orange")' ontouchstart='changeColor("orange")'></button>
+		    <button id='pink' onclick='changeColor("pink")' ontouchstart='changeColor("pink")'></button>
+            <button id='yellow' onclick='changeColor("yellow")' ontouchstart='changeColor("yellow")'></button>
+            <button id='purple' onclick='changeColor("purple")' ontouchstart='light_blue("purple")'></button>
+            <button id='Gray' onclick='changeColor("Gray")' ontouchstart='changeColor("Gray")'></button>
+            <button id='Brown' onclick='changeColor("Brown")' ontouchstart='changeColor("Brown")'></button>
+            <button id='greenyellow' onclick='changeColor("greenyellow")' ontouchstart='changeColor("greenyellow")'></button>
+            <button id='Crimson' onclick='changeColor("Crimson")' ontouchstart='changeColor("Crimson")'></button>
+            <button id='white' onclick='changeColor("white")' ontouchstart='changeColor("white")'></button>
+
+	    </div>
+	    <canvas id='canvas' width='420' height='350'></canvas>
+	    <div>
+	        <button class="btnborrar" onclick='clearCanvas()'>Borrar</button>
+	    </div>
+        <div class="colors">
+            <span class="active" style="--clr:#1dd1a1;" onclick="cambiarcolor('#1dd1a1')"></span>
+           <span style="--clr:#ff6b6b;" onclick="cambiarcolor('#ff6b6b')"></span>
+           <span style="--clr:#2e86de;" onclick="cambiarcolor('#2e86de')"></span>
+            <span style="--clr:#f368e0;" onclick="cambiarcolor('#f368e0')"></span>
+            <span style="--clr:#ff9f43;" onclick="cambiarcolor('#ff9f43')"></span>
+
+        </div>
+        <script src="js/dibujo.js">
+        </script>
+        <script>
+         function cambiarcolor (color){
+            
+            document.body.style.background = color;
+
+            document.querySelectorAll('span').forEach(function(item)
+            {
+                item.classList.remove('active')
+            })
+            event.target.classList.add('active')
+        }
+        </script>
+    </body>
+</html>
